@@ -2,6 +2,7 @@ package com.library.step_definitions;
 
 import com.library.pages.LibraryLoginPage;
 import com.library.utilities.ConfigurationReader;
+import com.library.utilities.CredentialReader;
 import com.library.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,10 +18,16 @@ public class Login_stepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("Url"));
     }
 
-    @When("User enters correct {string} and {string}")
-    public void user_enters_correct_and(String arg1, String arg2){
-        libraryLoginPage.inputUsername.sendKeys(arg1);
-        libraryLoginPage.inputPassword.sendKeys(arg2);
+    @When("User enters correct student {string} and {string}")
+    public void userEntersCorrectStudentAnd(String arg1, String arg2){
+        libraryLoginPage.inputUsername.sendKeys(CredentialReader.getProperty(arg1));
+        libraryLoginPage.inputPassword.sendKeys(CredentialReader.getProperty(arg2));
+    }
+
+    @When("User enters correct librarian {string} and {string}")
+    public void userEntersCorrectLibrarianAnd(String arg1, String arg2){
+        libraryLoginPage.inputUsername.sendKeys(CredentialReader.getProperty(arg1));
+        libraryLoginPage.inputPassword.sendKeys(CredentialReader.getProperty(arg2));
     }
 
     @When("User clicks the sign-in button")
@@ -39,4 +46,6 @@ public class Login_stepDefinitions {
             System.out.println("Login unsuccessful.");
         }
     }
+
+
 }
