@@ -5,14 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class Library_BasePage {
+public class Library_BasePage {
 
     public Library_BasePage(){
-        PageFactory.initElements(Driver.getDriver(), "http://library2.cybertekschool.com/#");
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//i[@class='fa fa-book']")
     public WebElement Books;
+
+        @FindBy(xpath = "//select[@id='book_categories']")
+        public WebElement BookCategories;
+
+        @FindBy(xpath = "//table[@id='tbl_books']//tr[1]/td[5]")
+        public WebElement FirstRowCategory;
 
     @FindBy(xpath = "//i[@class='fa fa-book-reader']")
     public WebElement BorrowingBooks;
@@ -28,4 +34,5 @@ public abstract class Library_BasePage {
 
     @FindBy(xpath = "//a[contains(text(), 'Log Out')]")
     public WebElement LogOut;
+
 }
