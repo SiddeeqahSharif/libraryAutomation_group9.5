@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Library_BasePage {
 
     public Library_BasePage(){
@@ -37,5 +39,8 @@ public class Library_BasePage {
 
     @FindBy(xpath = "//a[contains(text(), 'Log Out')]")
     public WebElement LogOut;
+
+    @FindBy(xpath="//th")
+    public List<WebElement> tableHeaders;
 
 }
