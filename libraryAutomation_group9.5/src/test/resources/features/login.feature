@@ -5,6 +5,7 @@ Feature: Login
 
   #Acceptance criteria Lib=1000
   #Student will login with valid username and password
+
   Scenario Outline: User will login as student
     Given User is on the library login page
     When User enters correct student "<Username>" and "<Password>"

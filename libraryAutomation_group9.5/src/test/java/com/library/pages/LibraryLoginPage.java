@@ -1,6 +1,7 @@
 package com.library.pages;
 
 
+import com.library.utilities.ConfigurationReader;
 import com.library.utilities.CredentialReader;
 import com.library.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,7 @@ public class LibraryLoginPage {
 
     //login method where we don't have to pass username, password
     public void loginToLibrary(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("Url"));
         inputUsername.sendKeys("student48@library");
         inputPassword.sendKeys("xjapSRzD");
         loginButton.click();
@@ -31,6 +33,7 @@ public class LibraryLoginPage {
 
     //overloaded version where we can pass username and password
     public void loginToLibrary(String username, String password){
+      //  Driver.getDriver().get(ConfigurationReader.getProperty("Url"));
         inputUsername.sendKeys(username);
         inputPassword.sendKeys(password);
         loginButton.click();
@@ -38,8 +41,17 @@ public class LibraryLoginPage {
 
     //login method where we can pass data from configuration.properties
     public void loginToLibrary_Credentials(){
+      //  Driver.getDriver().get(ConfigurationReader.getProperty("Url"));
         inputUsername.sendKeys(CredentialReader.getProperty("student1Username"));
         inputPassword.sendKeys(CredentialReader.getProperty("student1Password"));
         loginButton.click();
     }
+
+    public void LibrarianLoginToLibrary_Credentials(){
+      //  Driver.getDriver().get(ConfigurationReader.getProperty("Url"));
+        inputUsername.sendKeys(CredentialReader.getProperty("librarianUsername"));
+        inputPassword.sendKeys(CredentialReader.getProperty("librarianPassword"));
+        loginButton.click();
+    }
+
 }
