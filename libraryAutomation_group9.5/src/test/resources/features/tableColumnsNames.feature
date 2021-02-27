@@ -1,10 +1,11 @@
 
-@wip
+@columnNames
 Feature:As a students, I should be able to see tables with default info
 
   Scenario: Table columns names
-    When I login as student
-    Given I should land on hompage
+    Given User is on the library login page
+    When User enters correct student "student1Username" and "student1Password"
+    And User clicks the sign-in button
     Then I should see following column names:
       | Actions     |
       | ISBN        |
