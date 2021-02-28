@@ -16,4 +16,12 @@ Scenario: Librarian adds users
   And User clicks the SaveChangesButton
   Then User should see the new user on the UserPage
 
+  Scenario: Librarian edits users
+    When user clicks the EditUserButton
+    And User enters correct Full Name
+    And User clicks the SaveChangesButton
+    Then User should see the new user on the UserPage
+
+
+
 
