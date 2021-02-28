@@ -11,7 +11,8 @@ import org.junit.Assert;
 
 import java.util.Locale;
 
-public class Add_Users_4_Steps {
+
+public class AddUsers_stepDefinitions {
     Faker faker = new Faker(Locale.US);
     LibraryUsersPage libraryUsersPage = new LibraryUsersPage();
     LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
@@ -53,28 +54,23 @@ public class Add_Users_4_Steps {
         libraryUsersPage.UserAddSuccessMessage.isDisplayed();
     }
 
-    @When("user clicks the Users button")
-    public void userClicksUsersButton() {
-        libraryUsersPage.Users.click();
-    }
-
     @When("user clicks the EditUserButton")
     public void userClicksTheEditUserButton() {
         libraryUsersPage.EditUserButton.click();
     }
 
-    @And("User edits name")
+    @And("User enters correct Full Name")
     public void user_edits_name() {
         libraryUsersPage.NewUserFullName.sendKeys(faker.name().fullName());
     }
 
-    @And("User clicks SaveChangesButton")
+    @And("User clicks the SaveChangesButton")
     public void user_clicks_save_changes_button() {
         libraryUsersPage.SaveChangesButton.click();
     }
 
-    @Then("User should see the success message on UserPage")
-    public void user_should_see_the_success_message_on_the_UserPage() {
+    @Then("User should see the new user on the UserPage")
+    public void user_Should_see_userAdd_success_message() {
         Assert.assertTrue(libraryUsersPage.UserAddSuccessMessage.isDisplayed());
     }
 
@@ -83,3 +79,4 @@ public class Add_Users_4_Steps {
 
 
 }
+
