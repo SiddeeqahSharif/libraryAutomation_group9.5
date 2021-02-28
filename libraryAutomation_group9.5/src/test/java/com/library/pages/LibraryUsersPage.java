@@ -34,6 +34,12 @@ public class LibraryUsersPage extends Library_BasePage{
     public WebElement UserAddSuccessMessage;
 
 
+    @FindBy(id = "navbarDropdown")
+    public WebElement NavigationBarDropdown;
+
+    @FindBy(xpath = "//a[@class='dropdown-item']")
+    public WebElement LogoutButton;
+
 
 
 }
