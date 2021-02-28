@@ -70,7 +70,7 @@ public class AddUsers_stepDefinitions {
     }
 
     @Then("User should see the new user on the UserPage")
-    public void user_should_see_userAdd_success_message() {
+    public void user_Should_see_userAdd_success_message() {
         Assert.assertTrue(libraryUsersPage.UserAddSuccessMessage.isDisplayed());
     }
 
