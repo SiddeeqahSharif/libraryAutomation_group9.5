@@ -25,6 +25,27 @@ public class Library_BasePage {
     @FindBy(xpath = "//i[@class='fa fa-book-reader']")
     public WebElement BorrowingBooks;
 
+        @FindBy(xpath = "//table[@id='borrowed_list']//tr/th")
+        public List<WebElement> Columns;
+
+        @FindBy(xpath = "//table[@id='borrowed_list']//th[1]")
+        public WebElement Action;
+
+        @FindBy(xpath = "//table[@id='borrowed_list']//th[2]")
+        public WebElement BookName;
+
+        @FindBy(xpath = "//table[@id='borrowed_list']//th[3]")
+        public WebElement BorrowDate;
+
+        @FindBy(xpath = "//table[@id='borrowed_list']//th[4]")
+        public WebElement PlannedReturn;
+
+        @FindBy(xpath = "//table[@id='borrowed_list']//th[5]")
+        public WebElement ReturnDate;
+
+        @FindBy(xpath = "//table[@id='borrowed_list']//th[6]")
+        public WebElement IsReturned;
+
     @FindBy(xpath = "//a[@href='#dashboard']")
     public WebElement Dashboard;
 
