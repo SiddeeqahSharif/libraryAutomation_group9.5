@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class tableColumnsNames_stepDefinitions {
+public class Table_Columns_Names_6_Steps {
 
     Library_BasePage basePage = new Library_BasePage();
 

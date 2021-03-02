@@ -11,7 +11,7 @@ import org.junit.Assert;
 
 import java.util.Locale;
 
-public class AddUsers_stepDefinitions {
+public class Add_Users_4_Steps {
     Faker faker = new Faker(Locale.US);
     LibraryUsersPage libraryUsersPage = new LibraryUsersPage();
     LibraryLoginPage libraryLoginPage = new LibraryLoginPage();

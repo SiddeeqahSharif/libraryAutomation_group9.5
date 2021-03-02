@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class UserGroupCategories_stepDefinitions {
+public class User_Group_Categories_9_Steps {
 
     Library_BasePage library_basePage = new Library_BasePage();
 
