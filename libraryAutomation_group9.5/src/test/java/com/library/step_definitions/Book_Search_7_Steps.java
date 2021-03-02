@@ -20,7 +20,6 @@ public class Book_Search_7_Steps {
             library_basePage.BookCategories.sendKeys(Keys.ARROW_DOWN);
             library_basePage.BookCategories.click();
             System.out.println(library_basePage.FirstRowCategory.getText());
-
         }
 
         //Assert.assertTrue(library_basePage.FirstRowCategory.getText().equals(category.get(each)));

@@ -33,6 +33,16 @@ public class LibraryUsersPage extends Library_BasePage{
     @FindBy(xpath = "//div[@class='toast-message']")
     public WebElement UserAddSuccessMessage;
 
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement EditUserButton;
+
+
+    @FindBy(id = "navbarDropdown")
+    public WebElement NavigationBarDropdown;
+
+    @FindBy(xpath = "//a[@class='dropdown-item']")
+    public WebElement LogoutButton;
+
 
 
 
