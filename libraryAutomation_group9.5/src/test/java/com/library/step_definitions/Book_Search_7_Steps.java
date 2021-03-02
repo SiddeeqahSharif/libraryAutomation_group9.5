@@ -7,7 +7,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 
 import java.util.List;
 
-public class bookSearch_stepDefinitions {
+public class Book_Search_7_Steps {
 
     Library_BasePage library_basePage = new Library_BasePage();
 
