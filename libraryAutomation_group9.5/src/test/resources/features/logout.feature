@@ -1,7 +1,7 @@
-@login
-Feature: Login
-  Lib-1000 As a student user, I should be able to see the student landing page
-  Lib-1003 As a librarian user, I should be able to see the librarian landing page
+@logout
+Feature: Logout
+  Lib-1000 As a student user, I should be able to logout
+  Lib-1003 As a librarian user, I should be able to logout
 
   #Acceptance criteria Lib=1000
   #Student will login with valid username and password
@@ -10,7 +10,10 @@ Feature: Login
     Given User is on the library login page
     When User enters correct student "<Username>" and "<Password>"
     And User clicks the sign-in button
-    Then User sees the library homepage
+    And User sees the library homepage
+    When User click navigation bar dropdown
+    And Click Log Out
+    Then User is back on login page
 
     Examples:
       | Username         | Password         |
@@ -25,22 +28,13 @@ Feature: Login
     Given User is on the library login page
     When User enters correct librarian "<Username>" and "<Password>"
     And User clicks the sign-in button
-    Then User sees the library homepage
-
+    And User sees the library homepage
+    When User click navigation bar dropdown
+    And Click Log Out
+    Then User is back on login page
     Examples:
       | Username          | Password          |
       | librarianUsername | librarianPassword |
-
-
-
-
-
-
-
-
-
-
-
 
 
 
