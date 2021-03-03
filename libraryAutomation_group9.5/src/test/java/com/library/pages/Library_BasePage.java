@@ -64,4 +64,10 @@ public class Library_BasePage {
     @FindBy(xpath="//th")
     public List<WebElement> tableHeaders;
 
+    @FindBy(xpath = "//h6[@class='text-muted']")
+    public List<WebElement> librarianModules;
+
+    @FindBy(xpath = "//span[@class='title']")
+    public List<WebElement> studentModules;
+
 }
