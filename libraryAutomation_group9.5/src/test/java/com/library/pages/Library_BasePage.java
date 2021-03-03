@@ -88,7 +88,7 @@ public class Library_BasePage {
     public WebElement Group;
 
     @FindBy(xpath = "//table[@id='tbl_users_list']//th[6]")
-    public WebElement Status;
+    public WebElement StatusColumn;
 
 
 }

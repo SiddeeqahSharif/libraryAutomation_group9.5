@@ -3,13 +3,10 @@ package com.library.step_definitions;
 import com.library.pages.Library_BasePage;
 import com.library.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.support.ui.Select;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 public class User_Status_10_Steps {
