@@ -90,5 +90,11 @@ public class Library_BasePage {
     @FindBy(xpath = "//table[@id='tbl_users_list']//th[6]")
     public WebElement StatusColumn;
 
+    @FindBy(xpath = "//h6[@class='text-muted']")
+    public List<WebElement> librarianModules;
+
+    @FindBy(xpath = "//span[@class='title']")
+    public List<WebElement> studentModules;
+
 
 }
