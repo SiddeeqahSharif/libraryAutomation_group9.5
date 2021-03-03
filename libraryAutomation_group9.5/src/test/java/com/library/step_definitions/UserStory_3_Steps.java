@@ -23,8 +23,8 @@ public class UserStory_3_Steps {
         }
     }
 
-    @Then("Student should see following Modules")
-    public void student_should_see_following(List<String> expectedModules) {
+    @Then("Student should see the following Modules")
+    public void student_should_see_the_following(List<String> expectedModules) {
 
         for ( WebElement eachModule : library_basePage.studentModules) {
             System.out.println("eachModule = "  + eachModule.getText());
