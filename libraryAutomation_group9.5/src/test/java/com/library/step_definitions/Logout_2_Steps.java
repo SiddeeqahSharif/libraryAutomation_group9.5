@@ -5,7 +5,7 @@ import com.library.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Logout_stepDefinitions {
+public class Logout_2_Steps {
 
 
     LibraryUsersPage libraryUsersPage = new LibraryUsersPage();
