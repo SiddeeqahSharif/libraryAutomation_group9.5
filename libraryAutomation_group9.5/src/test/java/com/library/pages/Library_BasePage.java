@@ -67,4 +67,28 @@ public class Library_BasePage {
     @FindBy(xpath="//th")
     public List<WebElement> tableHeaders;
 
+
+    @FindBy(xpath = "//table[@id='tbl_users']//tr/th")
+    public List<WebElement> ColumnsNames;
+
+
+    @FindBy(xpath = "//table[@id='tbl_users_list']//th[1]")
+    public WebElement Actions;
+
+    @FindBy(xpath = "//table[@id='tbl_users_list']//th[2]")
+    public WebElement UserID;
+
+    @FindBy(xpath = "//table[@id='tbl_users_list']//th[3]")
+    public WebElement FullName;
+
+    @FindBy(xpath = "//table[@id='tbl_users_list']//th[4]")
+    public WebElement Email;
+
+    @FindBy(xpath = "//table[@id='tbl_users_list']//th[5]")
+    public WebElement Group;
+
+    @FindBy(xpath = "//table[@id='tbl_users_list']//th[6]")
+    public WebElement Status;
+
+
 }
