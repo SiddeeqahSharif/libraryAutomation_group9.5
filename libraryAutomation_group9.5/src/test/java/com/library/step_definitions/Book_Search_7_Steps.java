@@ -13,7 +13,6 @@ public class Book_Search_7_Steps {
 
     @Then("user sees the categories below")
     public void userSeesTheCategoriesBelow(List<String> category) throws StaleElementReferenceException {
-        //select dropdown - create an object of Select class
 
         library_basePage.BookCategories.click();
         for (String each:category) {
