@@ -18,7 +18,7 @@ Feature: As a user, I should be able to  see several modules once I login.
   Scenario: Student should see several modules when logged in
     When User enters correct student "student1Username" and "student1Password"
     And User clicks the sign-in button
-    Then Student should see the following Modules
+    Then Student should see following Modules
 
       | Books       |
       | Borrowing Books |
