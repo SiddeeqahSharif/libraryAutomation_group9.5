@@ -52,6 +52,9 @@ public class Library_BasePage {
     @FindBy(xpath = "//a[@href='#users']")
     public WebElement Users;
 
+        @FindBy(id = "user_status")
+        public WebElement Status;
+
     @FindBy(id="user_groups")
     public WebElement UserGroup;
 
