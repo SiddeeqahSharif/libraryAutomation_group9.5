@@ -1,4 +1,4 @@
-@bookCategories
+@smoke
 Feature: As a student, I should be able to search books with different categories
 
   Background:
